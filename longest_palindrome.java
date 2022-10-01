@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class longest_palindrome {
 
-    Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);  // Initialize the Scanner Class
     public static void main(String[] args) {
 
-        longest_palindrome obj = new longest_palindrome();
+        longest_palindrome obj = new longest_palindrome();  // Create an object
 
         String str = obj.input();
         int len = obj.longestPalindrome(str);
@@ -20,7 +20,7 @@ public class longest_palindrome {
         System.out.println("Enter the String to find the longest palindrome's length possible");
         s = sc.next();
 
-        return s;
+        return s;  // Return the variable
     }
 
     int longestPalindrome(String str){
@@ -29,7 +29,7 @@ public class longest_palindrome {
             occurrences[(int) letter]++;
         }
 
-        int length = 0;
+        int length = 0;  // Initialie the length variable
         for(int occur : occurrences){
             length += occur % 2 == 0 ? occur : occur - 1;
         }
