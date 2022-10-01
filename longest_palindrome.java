@@ -1,10 +1,10 @@
-package com.akshat.string_programs;
 import java.util.Scanner;
 
-public class longest_palindrome {
-
+public class longest_palindrome 
+{
     Scanner sc = new Scanner(System.in);  // Initialize the Scanner Class
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
 
         longest_palindrome obj = new longest_palindrome();  // Create an object
 
@@ -26,12 +26,12 @@ public class longest_palindrome {
     int longestPalindrome(String str){
         int[] occurrences =  new int[128];
         for(char letter : str.toCharArray()){
-            occurrences[(int) letter]++;
+            occurrences[(int) letter]++;  // Add into array
         }
 
         int length = 0;  // Initialie the length variable
         for(int occur : occurrences){
-            length += occur % 2 == 0 ? occur : occur - 1;
+            length += occur % 2 == 0 ? occur : occur - 1;  // Logic
         }
 
         if(length < str.length()) length++;
